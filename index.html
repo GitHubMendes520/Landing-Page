@@ -20,11 +20,30 @@
     .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); }
     .embed-responsive{ position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:1rem; }
     .embed-responsive iframe, .embed-responsive video{ position:absolute; top:0; left:0; width:100%; height:100%; }
+    .lang-flag[aria-current="true"]{ outline:2px solid #0ea5e9; outline-offset:2px; background:rgba(14,165,233,.1); }
     .hidden{ display:none; }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100">
-  <!-- Hero -->
+  <nav class="sticky top-0 z-50 bg-slate-950/70 backdrop-blur border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="#" class="font-extrabold tracking-tight">SR London Services</a>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="#servicos" class="text-slate-300 hover:text-white" data-i18n-pt="Serviços" data-i18n-en="Services" data-i18n-es="Servicios">Serviços</a>
+        <a href="#galeria" class="text-slate-300 hover:text-white" data-i18n-pt="Galeria" data-i18n-en="Gallery" data-i18n-es="Galería">Galeria</a>
+        <a href="#contato" class="text-slate-300 hover:text-white" data-i18n-pt="Contato" data-i18n-en="Contact" data-i18n-es="Contacto">Contato</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <button class="lang-btn lang-flag w-9 h-9 rounded-full flex items-center justify-center text-xl"
+                data-lang="pt" aria-label="Português (Brasil)" aria-current="true">🇧🇷</button>
+        <button class="lang-btn lang-flag w-9 h-9 rounded-full flex items-center justify-center text-xl"
+                data-lang="en" aria-label="English (UK)">🇬🇧</button>
+        <button class="lang-btn lang-flag w-9 h-9 rounded-full flex items-center justify-center text-xl"
+                data-lang="es" aria-label="Español">🇪🇸</button>
+      </div>
+    </div>
+  </nav>
+
   <header class="relative overflow-hidden">
     <div class="absolute inset-0">
       <img class="w-full h-full object-cover opacity-30" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80" alt="London skyline"/>
@@ -32,66 +51,79 @@
     </div>
     <div class="relative max-w-6xl mx-auto px-6 py-24 lg:py-32">
       <div class="max-w-3xl">
-        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-400/10 text-sky-300 ring-1 ring-sky-300/20">Atendimento hoje em Londres</span>
-        <h1 class="mt-6 text-4xl md:text-6xl font-extrabold leading-tight">Drone, Reels, iPhone & Wi‑Fi<br><span class="text-sky-400">Serviços rápidos • Preço justo</span></h1>
-        <p class="mt-4 text-lg text-slate-300">Agende agora pelo WhatsApp. Entrega no mesmo dia para fotos/vídeos, configuração de iPhone/iCloud e otimização de internet residencial.</p>
+        <span class="badge inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-sky-400/10 text-sky-300 ring-1 ring-sky-300/20"
+              data-i18n-pt="Atendimento hoje em Londres" data-i18n-en="Same‑day service in London" data-i18n-es="Servicio el mismo día en Londres">Atendimento hoje em Londres</span>
+        <h1 class="mt-6 text-4xl md:text-6xl font-extrabold leading-tight">
+          <span data-i18n-pt="Drone, Reels, iPhone & Wi‑Fi" data-i18n-en="Drone, Reels, iPhone & Wi‑Fi" data-i18n-es="Dron, Reels, iPhone y Wi‑Fi">Drone, Reels, iPhone & Wi‑Fi</span><br>
+          <span class="text-sky-400" data-i18n-pt="Serviços rápidos • Preço justo" data-i18n-en="Fast service • Fair price" data-i18n-es="Servicio rápido • Precio justo">Serviços rápidos • Preço justo</span>
+        </h1>
+        <p class="mt-4 text-lg text-slate-300"
+           data-i18n-pt="Agende agora pelo WhatsApp. Entrega no mesmo dia para fotos/vídeos, configuração de iPhone/iCloud e otimização de internet residencial."
+           data-i18n-en="Book via WhatsApp. Same‑day delivery for drone photos/videos, iPhone/iCloud setup and home Wi‑Fi optimization."
+           data-i18n-es="Reserva por WhatsApp. Entrega el mismo día para fotos/vídeos con dron, configuración de iPhone/iCloud y optimización de Wi‑Fi en casa.">Agende agora pelo WhatsApp…</p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a id="ctaHero" href="#" class="inline-flex items-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-5 py-3">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2ZM7 8h10v2H7V8Zm0 4h10v2H7v-2Z"/></svg>
-            Falar no WhatsApp
+            <span data-i18n-pt="Falar no WhatsApp" data-i18n-en="Chat on WhatsApp" data-i18n-es="Hablar por WhatsApp">Falar no WhatsApp</span>
           </a>
           <a href="#servicos" class="inline-flex items-center gap-2 rounded-xl glass px-5 py-3 hover:bg-white/10">
-            Ver serviços
+            <span data-i18n-pt="Ver serviços" data-i18n-en="See services" data-i18n-es="Ver servicios">Ver serviços</span>
           </a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Serviços -->
   <section id="servicos" class="max-w-6xl mx-auto px-6 py-16">
-    <h2 class="text-3xl md:text-4xl font-extrabold">Serviços</h2>
-    <p class="mt-2 text-slate-300">Escolha um serviço e chame direto no WhatsApp. Sem burocracia.</p>
+    <h2 class="text-3xl md:text-4xl font-extrabold" data-i18n-pt="Serviços" data-i18n-en="Services" data-i18n-es="Servicios">Serviços</h2>
+    <p class="mt-2 text-slate-300" data-i18n-pt="Escolha um serviço e chame direto no WhatsApp. Sem burocracia."
+       data-i18n-en="Choose a service and message me on WhatsApp. No fuss."
+       data-i18n-es="Elige un servicio y envíame mensaje por WhatsApp. Sin burocracia.">Escolha um serviço…</p>
 
     <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Card Drone -->
       <article class="rounded-2xl glass p-6 flex flex-col">
         <div class="text-2xl">🚁</div>
-        <h3 class="mt-3 text-xl font-bold">Drone – Fotos & Vídeos</h3>
-        <p class="mt-2 text-slate-300 text-sm">Imobiliárias, negócios, obras, inspeção de telhado. Entrega em HD/4K no mesmo dia.</p>
+        <h3 class="mt-3 text-xl font-bold" data-i18n-pt="Drone – Fotos & Vídeos" data-i18n-en="Drone – Photos & Video" data-i18n-es="Dron – Fotos y Video">Drone – Fotos & Vídeos</h3>
+        <p class="mt-2 text-slate-300 text-sm"
+           data-i18n-pt="Imobiliárias, negócios, obras, inspeção de telhado. Entrega em HD/4K no mesmo dia."
+           data-i18n-en="Real estate, businesses, construction, roof inspection. Same‑day HD/4K delivery."
+           data-i18n-es="Inmuebles, comercios, obras, inspección de techos. Entrega en HD/4K el mismo día.">…</p>
         <div class="mt-auto flex items-center justify-between pt-4">
           <span class="text-sky-300 font-semibold">de £40</span>
           <a data-service="Drone – Fotos & Vídeos (de £40)" class="btnWA inline-flex items-center gap-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-4 py-2 cursor-pointer">WhatsApp</a>
         </div>
       </article>
-
-      <!-- Card Reels -->
       <article class="rounded-2xl glass p-6 flex flex-col">
         <div class="text-2xl">🎥</div>
-        <h3 class="mt-3 text-xl font-bold">Reels p/ Instagram</h3>
-        <p class="mt-2 text-slate-300 text-sm">Filmagem com iPhone 15 Pro Max + edição rápida (CapCut). Perfeito para restaurantes, barbearias e lojas.</p>
+        <h3 class="mt-3 text-xl font-bold" data-i18n-pt="Reels p/ Instagram" data-i18n-en="Instagram Reels" data-i18n-es="Reels para Instagram">Reels p/ Instagram</h3>
+        <p class="mt-2 text-slate-300 text-sm"
+           data-i18n-pt="Filmagem com iPhone 15 Pro Max + edição rápida (CapCut). Perfeito para restaurantes, barbearias e lojas."
+           data-i18n-en="Shot on iPhone 15 Pro Max + quick edit. Perfect for restaurants, barbers and shops."
+           data-i18n-es="Grabado con iPhone 15 Pro Max + edición rápida. Perfecto para restaurantes, barberías y tiendas.">…</p>
         <div class="mt-auto flex items-center justify-between pt-4">
           <span class="text-sky-300 font-semibold">de £25</span>
           <a data-service="Reels Instagram – iPhone 15 Pro Max (de £25)" class="btnWA inline-flex items-center gap-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-4 py-2 cursor-pointer">WhatsApp</a>
         </div>
       </article>
-
-      <!-- Card iPhone -->
       <article class="rounded-2xl glass p-6 flex flex-col">
         <div class="text-2xl">📱</div>
-        <h3 class="mt-3 text-xl font-bold">Configuração de iPhone</h3>
-        <p class="mt-2 text-slate-300 text-sm">iCloud, backup, migração Android→iPhone, eSIM, WhatsApp Business. Atendimento no local.</p>
+        <h3 class="mt-3 text-xl font-bold" data-i18n-pt="Configuração de iPhone" data-i18n-en="iPhone Setup" data-i18n-es="Configuración de iPhone">Configuração de iPhone</h3>
+        <p class="mt-2 text-slate-300 text-sm"
+           data-i18n-pt="iCloud, backup, migração Android→iPhone, eSIM, WhatsApp Business. Atendimento no local."
+           data-i18n-en="iCloud, backup, Android→iPhone migration, eSIM, WhatsApp Business. On‑site."
+           data-i18n-es="iCloud, copia de seguridad, migración Android→iPhone, eSIM, WhatsApp Business. A domicilio.">…</p>
         <div class="mt-auto flex items-center justify-between pt-4">
           <span class="text-sky-300 font-semibold">£15–£30</span>
           <a data-service="Configuração de iPhone / iCloud (£15–£30)" class="btnWA inline-flex items-center gap-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-4 py-2 cursor-pointer">WhatsApp</a>
         </div>
       </article>
-
-      <!-- Card Wi‑Fi -->
       <article class="rounded-2xl glass p-6 flex flex-col">
         <div class="text-2xl">📡</div>
-        <h3 class="mt-3 text-xl font-bold">Otimização de Wi‑Fi</h3>
-        <p class="mt-2 text-slate-300 text-sm">Configuração de roteador, melhora de sinal, repetidores e rede doméstica sem quedas.</p>
+        <h3 class="mt-3 text-xl font-bold" data-i18n-pt="Otimização de Wi‑Fi" data-i18n-en="Wi‑Fi Optimization" data-i18n-es="Optimización de Wi‑Fi">Otimização de Wi‑Fi</h3>
+        <p class="mt-2 text-slate-300 text-sm"
+           data-i18n-pt="Configuração de roteador, melhora de sinal, repetidores e rede doméstica sem quedas."
+           data-i18n-en="Router setup, signal boost, extenders and stable home network."
+           data-i18n-es="Configuración de router, mejora de señal, repetidores y red estable en casa.">…</p>
         <div class="mt-auto flex items-center justify-between pt-4">
           <span class="text-sky-300 font-semibold">£20–£40</span>
           <a data-service="Otimização de Wi‑Fi residencial (£20–£40)" class="btnWA inline-flex items-center gap-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-4 py-2 cursor-pointer">WhatsApp</a>
@@ -100,28 +132,30 @@
     </div>
   </section>
 
-  <!-- Você sabia que a Samsung não fabrica só celulares? (vídeo fixo no código) -->
   <section id="galeria" class="bg-slate-900/60 border-y border-white/5">
     <div class="max-w-6xl mx-auto px-6 py-14">
-      <h2 class="text-3xl md:text-4xl font-extrabold">Galeria</h2>
-      <p class="mt-2 text-slate-300">Ela produz as telas do iPhone, componentes automotivos, peças de navios e até tecnologias usadas em foguetes.<code>É uma das indústrias</code>   mais completas do planeta.</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold" data-i18n-pt="Galeria" data-i18n-en="Gallery" data-i18n-es="Galería">Galeria</h2>
+      <p class="mt-2 text-slate-300"
+         data-i18n-pt="Curiosidade: a Samsung vai muito além dos celulares. Ela fabrica telas do iPhone, produz componentes automotivos, constrói navios e desenvolve tecnologias usadas até na indústria aeroespacial. Um exemplo de como uma marca pode dominar várias cadeias de produção."
+         data-i18n-en="Fun fact: Samsung goes far beyond phones. It manufactures iPhone displays, builds automotive components, constructs ships, and develops technologies used even in the aerospace industry. A case study of a brand mastering multiple value chains."
+         data-i18n-es="Dato curioso: Samsung va mucho más allá de los móviles. Fabrica pantallas para iPhone, produce componentes automotrices, construye buques y desarrolla tecnologías usadas incluso en la industria aeroespacial. Un ejemplo de dominio en varias cadenas de valor.">Curiosidade…</p>
 
-      <!-- Player responsivo: tenta carregar video.mp4; se falhar, mostra YouTube -->
       <div class="mt-6 grid md:grid-cols-2 gap-6 items-start">
         <div class="embed-responsive rounded-2xl overflow-hidden">
           <video id="localVideo" src="video.mp4" controls playsinline class="bg-black"></video>
           <iframe id="ytEmbed" class="hidden" src="https://www.youtube.com/embed/R5k4fjC_4dA" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div class="text-slate-300 text-sm space-y-3">
-          <p>• Samsung Display fornece telas OLED para iPhone<strong>video.mp4</strong> #apple <em>#curiosidades</em>.</p>
-          <p>• Para usar link do YouTube, troque o ID no <code>src</code> do <code>#ytEmbed</code> (ex.: <code>Você sabia sobre isso? </code>).</p>
-          <p>• Componentes automotivos da Samsung Electro-Mechanics</p>
+          <ul class="list-disc list-inside space-y-2">
+            <li><span data-i18n-pt="Telas OLED para iPhone – Samsung Display" data-i18n-en="OLED displays for iPhone – Samsung Display" data-i18n-es="Pantallas OLED para iPhone – Samsung Display">Telas OLED para iPhone – Samsung Display</span> – <a class="text-sky-400 hover:underline" href="https://www.samsungdisplay.com/eng" target="_blank" rel="noopener">fonte</a></li>
+            <li><span data-i18n-pt="Componentes automotivos – Samsung Electro‑Mechanics" data-i18n-en="Automotive components – Samsung Electro‑Mechanics" data-i18n-es="Componentes automotrices – Samsung Electro‑Mechanics">Componentes automotivos – Samsung Electro‑Mechanics</span> – <a class="text-sky-400 hover:underline" href="https://www.samsungsem.com/global" target="_blank" rel="noopener">fonte</a></li>
+            <li><span data-i18n-pt="Construção naval e offshore – Samsung Heavy Industries" data-i18n-en="Shipbuilding & offshore – Samsung Heavy Industries" data-i18n-es="Construcción naval y offshore – Samsung Heavy Industries">Construção naval e offshore – Samsung Heavy Industries</span> – <a class="text-sky-400 hover:underline" href="https://www.samsungshi.com/eng" target="_blank" rel="noopener">fonte</a></li>
+          </ul>
         </div>
       </div>
 
-      <!-- Grid simples de imagens (opcional) -->
       <div class="mt-10">
-        <h3 class="text-xl font-bold mb-3">Imagens</h3>
+        <h3 class="text-xl font-bold mb-3" data-i18n-pt="Imagens" data-i18n-en="Images" data-i18n-es="Imágenes">Imagens</h3>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <img class="rounded-2xl object-cover w-full h-48" src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=60" alt="Drone sample">
           <img class="rounded-2xl object-cover w-full h-48" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60" alt="Phone service">
@@ -132,96 +166,160 @@
     </div>
   </section>
 
-  <!-- Depoimentos/Prova -->
-  <section class="bg-slate-900/60 border-y border-white/5">
-    <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-6">
-      <figure class="glass rounded-2xl p-6">
-        <blockquote class="text-slate-300">“Chegou no mesmo dia e entregou as imagens do drone impecáveis para o anúncio do meu imóvel.”</blockquote>
-        <figcaption class="mt-3 text-sm text-slate-400">— Landlord em Haringey</figcaption>
-      </figure>
-      <figure class="glass rounded-2xl p-6">
-        <blockquote class="text-slate-300">“Os reels aumentaram as reservas do restaurante em uma semana.”</blockquote>
-        <figcaption class="mt-3 text-sm text-slate-400">— Gerente, Turkish Grill</figcaption>
-      </figure>
-      <figure class="glass rounded-2xl p-6">
-        <blockquote class="text-slate-300">“Arrumou meu Wi‑Fi e configurou impressoras da loja sem enrolação.”</blockquote>
-        <figcaption class="mt-3 text-sm text-slate-400">— Loja de roupas, Seven Sisters</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- CTA -->
   <section class="max-w-6xl mx-auto px-6 py-16">
     <div class="glass rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-6">
       <div class="flex-1">
-        <h3 class="text-2xl md:text-3xl font-extrabold">Pronto para hoje?</h3>
-        <p class="mt-2 text-slate-300">Atendo em toda Londres. Clique para abrir o WhatsApp com mensagem pronta e horário desejado.</p>
+        <h3 class="text-2xl md:text-3xl font-extrabold" data-i18n-pt="Pronto para hoje?" data-i18n-en="Ready for today?" data-i18n-es="¿Listo para hoy?">Pronto para hoje?</h3>
+        <p class="mt-2 text-slate-300" data-i18n-pt="Atendo em toda Londres. Clique para abrir o WhatsApp com mensagem pronta."
+           data-i18n-en="I cover all London. Click to open WhatsApp with a pre‑filled message."
+           data-i18n-es="Cubro todo Londres. Haz clic para abrir WhatsApp con mensaje pre‑llenado.">…</p>
       </div>
       <div class="flex gap-3">
-        <a id="ctaHoje" href="#" class="inline-flex items-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-5 py-3">Agendar agora</a>
-        <a href="#servicos" class="inline-flex items-center gap-2 rounded-xl glass px-5 py-3 hover:bg-white/10">Ver pacotes</a>
+        <a id="ctaHoje" href="#" class="inline-flex items-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-5 py-3" data-i18n-pt="Agendar agora" data-i18n-en="Book now" data-i18n-es="Reservar ahora">Agendar agora</a>
+        <a href="#servicos" class="inline-flex items-center gap-2 rounded-xl glass px-5 py-3 hover:bg-white/10" data-i18n-pt="Ver pacotes" data-i18n-en="See packages" data-i18n-es="Ver paquetes">Ver pacotes</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <section id="contato" class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-3xl md:text-4xl font-extrabold" data-i18n-pt="Contato" data-i18n-en="Contact" data-i18n-es="Contacto">Contato</h2>
+    <p class="mt-2 text-slate-300" data-i18n-pt="Preencha o formulário e eu respondo no WhatsApp."
+       data-i18n-en="Fill the form and I reply on WhatsApp."
+       data-i18n-es="Completa el formulario y te respondo por WhatsApp.">…</p>
+
+    <form id="leadForm" class="mt-6 grid md:grid-cols-2 gap-4 glass rounded-2xl p-6">
+      <div>
+        <label class="block text-sm text-slate-300 mb-1" data-i18n-pt="Nome" data-i18n-en="Name" data-i18n-es="Nombre">Nome</label>
+        <input id="fName" required class="w-full rounded-xl bg-slate-900 border border-white/10 px-4 py-3" placeholder="Seu nome"/>
+      </div>
+      <div>
+        <label class="block text-sm text-slate-300 mb-1" data-i18n-pt="WhatsApp" data-i18n-en="WhatsApp" data-i18n-es="WhatsApp">WhatsApp</label>
+        <input id="fPhone" class="w-full rounded-xl bg-slate-900 border border-white/10 px-4 py-3" placeholder="4479…"/>
+      </div>
+      <div>
+        <label class="block text-sm text-slate-300 mb-1" data-i18n-pt="Serviço" data-i18n-en="Service" data-i18n-es="Servicio">Serviço</label>
+        <select id="fService" class="w-full rounded-xl bg-slate-900 border border-white/10 px-4 py-3">
+          <option>Drone</option>
+          <option>Reels</option>
+          <option>iPhone</option>
+          <option>Wi‑Fi</option>
+          <option>Outro</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm text-slate-300 mb-1" data-i18n-pt="Link de vídeo/imagem (opcional)" data-i18n-en="Video/Image link (optional)" data-i18n-es="Enlace de video/imagen (opcional)">Link</label>
+        <input id="fLink" type="url" class="w-full rounded-xl bg-slate-900 border border-white/10 px-4 py-3" placeholder="https://youtu.be/… ou https://drive.google.com/…"/>
+      </div>
+      <div class="md:col-span-2">
+        <label class="block text-sm text-slate-300 mb-1" data-i18n-pt="Mensagem" data-i18n-en="Message" data-i18n-es="Mensaje">Mensagem</label>
+        <textarea id="fMsg" rows="4" class="w-full rounded-xl bg-slate-900 border border-white/10 px-4 py-3" placeholder="Conte rapidamente o que você precisa"></textarea>
+      </div>
+      <div class="md:col-span-2 flex gap-3">
+        <button type="submit" class="rounded-xl bg-green-500 hover:bg-green-400 text-slate-950 font-semibold px-5 py-3" data-i18n-pt="Enviar no WhatsApp" data-i18n-en="Send on WhatsApp" data-i18n-es="Enviar por WhatsApp">Enviar no WhatsApp</button>
+        <a id="ctaEmail" href="#" class="rounded-xl glass px-5 py-3" data-i18n-pt="Ou envie por e‑mail" data-i18n-en="Or send by e‑mail" data-i18n-es="O envía por e‑mail">Ou envie por e‑mail</a>
+      </div>
+      <p class="text-xs text-slate-400 md:col-span-2" data-i18n-pt="Observação: uploads locais não são armazenados no hosting estático. Use o campo de link para compartilhar via Drive/YouTube/Dropbox."
+         data-i18n-en="Note: local uploads aren’t stored on static hosting. Use the link field to share via Drive/YouTube/Dropbox."
+         data-i18n-es="Nota: las subidas locales no se guardan en hosting estático. Usa el campo de enlace para compartir por Drive/YouTube/Dropbox."></p>
+    </form>
+  </section>
+
   <footer class="border-t border-white/5">
     <div class="max-w-6xl mx-auto px-6 py-10 text-sm text-slate-400">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-        <p>© <span id="y"></span> Serviços Rápidos Londres – Todos os direitos reservados.</p>
-        <p>Atendo em: Haringey, Tottenham, Wood Green, Seven Sisters e região.</p>
+        <p>© <span id="y"></span> SR London Services – All rights reserved.</p>
+        <p data-i18n-pt="Atendo em: Haringey, Tottenham, Wood Green, Seven Sisters e região."
+           data-i18n-en="Serving: Haringey, Tottenham, Wood Green, Seven Sisters & area."
+           data-i18n-es="Atiendo en: Haringey, Tottenham, Wood Green, Seven Sisters y alrededores.">Atendo em…</p>
       </div>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
   <a id="waFloat" href="#" class="fixed bottom-5 right-5 inline-flex items-center justify-center w-14 h-14 rounded-full shadow-lg bg-green-500 hover:bg-green-400 text-white" aria-label="WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M20.52 3.48a11.5 11.5 0 0 0-18.2 13.1L1 23l6.6-1.72a11.46 11.46 0 0 0 5.5 1.4h.01c6.34 0 11.5-5.16 11.5-11.5 0-3.07-1.2-5.96-3.4-8.1ZM12.1 20.5c-1.7 0-3.35-.45-4.8-1.3l-.35-.2-3.9 1.02 1.04-3.8-.22-.37a8.9 8.9 0 1 1 8.24 4.65Zm4.9-6.74c-.27-.13-1.6-.79-1.84-.88-.25-.1-.43-.14-.62.14-.18.27-.71.87-.87 1.05-.16.18-.32.2-.59.07-.27-.13-1.14-.42-2.18-1.35-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.55.12-.12.27-.32.4-.48.13-.16.18-.27.27-.45.09-.18.04-.34-.02-.48-.07-.13-.62-1.5-.85-2.06-.22-.53-.45-.46-.62-.47h-.53c-.18 0-.48.07-.73.34-.25.27-.96.93-.96 2.26s.99 2.62 1.13 2.8c.14.18 1.94 2.96 4.7 4.15.66.28 1.18.45 1.58.58.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.82-1.27.22-.62.22-1.16.16-1.27-.06-.11-.24-.18-.5-.3Z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M20.52 3.48a11.5 11.5 0 0 0-18.2 13.1L1 23l6.6-1.72a11.46 11.46 0 0 0 5.5 1.4h.01c6.34 0 11.5-5.16 11.5-11.5 0-3.07-1.2-5.96-3.4-8.1ZM12.1 20.5c-1.7 0-3.35-.45-4.8-1.3l-.35-.2-3.9 1.02 1.04-3.8-.22-.37a8.9 8.9 0 1 1 8.24 4.65Zm4.9-6.74c-.27-.13-1.6-.79-1.84-.88-.25-.1-.43-.14-.62.14-.18.27-.71.87-.87 1.05-.16.18-.32.2-.59.07-.27-.13-1.14-.42-2.18-1.35-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.55.12-.12.27-.32.4-.48.13-.16.18-.27.27-.45.09-.18.04-.34-.02-.48-.07-.13-.62-1.5-.85-2.06-.22-.53-.45-.46-.62-.47h-.53c-.18 0-.48.07-.73 .34-.25 .27-.96 .93-.96 2.26s.99 2.62 1.13 2.8c.14 .18 1.94 2.96 4.7 4.15.66 .28 1.18 .45 1.58 .58.66 .21 1.26 .18 1.73 .11.53 -.08 1.6 -.65 1.82 -1.27.22 -.62 .22 -1.16 .16 -1.27-.06 -.11 -.24 -.18 -.5 -.3Z"/></svg>
   </a>
 
   <script>
-    // SEU NÚMERO WHATSAPP AQUI (apenas dígitos com código do país, ex: +44 7xxx -> 447xxxxxxxxx)
-    const WHATSAPP_NUMBER = '447494204460'; // TODO: substituir pelo seu número real
-
+    const WHATSAPP_NUMBER = '447494204460';
+    const EMAIL_ADDRESS = 'globalexpressbrasil@gmail.com';
     function waLink(msg) {
-      const text = encodeURIComponent(msg + '\n— Enviado pelo site');
+      const text = encodeURIComponent(msg + '\\n— Enviado pelo site');
       return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
     }
 
-    // Ações dos botões
+    let currentLang = 'pt';
+    const langBtns = document.querySelectorAll('.lang-btn');
+    function applyLang(lang){
+      currentLang = lang;
+      langBtns.forEach(b=> b.setAttribute('aria-current', b.dataset.lang===lang));
+      document.querySelectorAll('[data-i18n-pt]').forEach(el=>{
+        const map = { pt: el.getAttribute('data-i18n-pt'), en: el.getAttribute('data-i18n-en'), es: el.getAttribute('data-i18n-es') };
+        el.textContent = map[lang] || map['pt'];
+      });
+      document.documentElement.lang = (lang==='pt'?'pt-br':(lang==='en'?'en':'es'));
+    }
+    langBtns.forEach(b=> b.addEventListener('click', ()=> applyLang(b.dataset.lang)));
+
     document.querySelectorAll('.btnWA').forEach(btn => {
       btn.addEventListener('click', () => {
         const service = btn.getAttribute('data-service') || 'Contato';
         window.open(waLink(`Olá! Tenho interesse em: ${service}. Pode atender hoje?`), '_blank');
       });
     });
+    const ctaHero = document.getElementById('ctaHero');
+    if(ctaHero) ctaHero.href = waLink('Olá! Quero agendar um serviço hoje.');
+    const waFloat = document.getElementById('waFloat');
+    if(waFloat) waFloat.href = waLink('Olá! Vim pelo botão flutuante.');
+    const ctaHoje = document.getElementById('ctaHoje');
+    if(ctaHoje) ctaHoje.href = waLink('Olá! Quero reservar um horário hoje.');
 
-    document.getElementById('ctaHero').href = waLink('Olá! Quero agendar um serviço hoje.');
-    document.getElementById('ctaHoje').href = waLink('Olá! Quero reservar um horário hoje.');
-    document.getElementById('waFloat').href = waLink('Olá! Vim pelo botão flutuante.');
+    const leadForm = document.getElementById('leadForm');
+    if(leadForm){
+      leadForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const name = document.getElementById('fName').value.trim();
+        const phone = document.getElementById('fPhone').value.trim();
+        const service = document.getElementById('fService').value;
+        const link = document.getElementById('fLink').value.trim();
+        const msg = document.getElementById('fMsg').value.trim();
+        let text = `Nome: ${name}\\nWhatsApp: ${phone}\\nServiço: ${service}\\nMensagem: ${msg}`;
+        if(link) text += `\\nLink: ${link}`;
+        window.open(waLink(text), '_blank');
+      });
+    }
+    const ctaEmail = document.getElementById('ctaEmail');
+    if(ctaEmail){
+      ctaEmail.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const name = document.getElementById('fName').value.trim();
+        const phone = document.getElementById('fPhone').value.trim();
+        const service = document.getElementById('fService').value;
+        const link = document.getElementById('fLink').value.trim();
+        const msg = document.getElementById('fMsg').value.trim();
+        let body = encodeURIComponent(`Nome: ${name}\\nWhatsApp: ${phone}\\nServiço: ${service}\\nMensagem: ${msg}\\nLink: ${link}`);
+        const mailto = `mailto:${EMAIL_ADDRESS}?subject=Novo lead do site&body=${body}`;
+        window.location.href = mailto;
+      });
+    }
 
-    // Ano do rodapé
-    document.getElementById('y').textContent = new Date().getFullYear();
-      // Galeria: testa se existe video.mp4 (HEAD). Se não existir, mostra YouTube.
     (async () => {
       try {
         const r = await fetch('video.mp4', { method: 'HEAD' });
         const hasLocal = r.ok;
         const v = document.getElementById('localVideo');
         const yt = document.getElementById('ytEmbed');
-        if(hasLocal){
-          v.classList.remove('hidden');
-          yt.classList.add('hidden');
-        } else {
-          v.classList.add('hidden');
-          yt.classList.remove('hidden');
-        }
+        if(hasLocal){ v.classList.remove('hidden'); yt.classList.add('hidden'); }
+        else { v.classList.add('hidden'); yt.classList.remove('hidden'); }
       } catch (e){
         const v = document.getElementById('localVideo');
         const yt = document.getElementById('ytEmbed');
         if(v && yt){ v.classList.add('hidden'); yt.classList.remove('hidden'); }
       }
     })();
+
+    const yearSpan = document.getElementById('y');
+    if(yearSpan) yearSpan.textContent = new Date().getFullYear();
+    applyLang('pt');
   </script>
 </body>
 </html>
